@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+<title>MÁFIA BARBER — Corte, Navalha &amp; Respeito</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+<link href="style.css" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"outline-variant":"#4e4639","secondary-container":"#614319","secondary":"#eabf8a","surface-container-lowest":"#0e0e0e","error-container":"#93000a","inverse-on-surface":"#313030","tertiary-fixed-dim":"#cec6b5","surface":"#131313","inverse-primary":"#775a19","inverse-surface":"#e5e2e1","secondary-fixed-dim":"#eabf8a","primary-container":"#c5a059","surface-variant":"#353534","background":"#131313","on-tertiary-container":"#403b2e","outline":"#9a8f80","tertiary-container":"#aca595","on-secondary-fixed-variant":"#5e4117","on-tertiary-fixed-variant":"#4b4639","on-tertiary":"#343024","on-surface-variant":"#d1c5b4","on-primary-fixed":"#261900","on-secondary-container":"#dab17d","on-error-container":"#ffdad6","on-background":"#e5e2e1","on-tertiary-fixed":"#1f1b10","on-primary-container":"#4e3700","on-primary-fixed-variant":"#5d4201","on-secondary":"#442b03","surface-dim":"#131313","tertiary-fixed":"#eae2d0","surface-tint":"#e9c176","on-error":"#690005","error":"#ffb4ab","on-secondary-fixed":"#2a1800","on-primary":"#412d00","primary-fixed":"#ffdea5","primary-fixed-dim":"#e9c176","surface-container-high":"#2a2a2a","primary":"#e9c176","surface-container-low":"#1c1b1b","surface-container-highest":"#353534","surface-container":"#201f1f","on-surface":"#e5e2e1","surface-bright":"#393939","tertiary":"#cec6b5","secondary-fixed":"#ffddb5"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","gutter-mobile":"1rem","gutter":"1.5rem","space-xl":"2.5rem","space-md":"1rem","margin-mobile":"1.25rem","space-xs":"0.25rem","margin":"3rem","space-sm":"0.5rem"},"fontFamily":{"label-sm":["Inter"],"headline-lg":["Playfair Display"],"display-lg":["Playfair Display"],"label-lg":["Inter"],"headline-lg-mobile":["Playfair Display"],"body-md":["Inter"],"headline-sm":["Playfair Display"],"display-lg-mobile":["Playfair Display"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-md":["Playfair Display"],"label-md":["Inter"]},"fontSize":{"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.12em","fontWeight":"500"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.08em","fontWeight":"600"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"0em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"600"}],"display-lg-mobile":["38px",{"lineHeight":"46px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.1em","fontWeight":"600"}]}}}}</script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+
+<div id="scroll-progress"></div>
+
+<!-- HEADER (mobile compacto / desktop com menu) -->
+<header class="site-header fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+  <div class="h-16 lg:h-20 max-w-[1320px] mx-auto px-gutter-mobile lg:px-gutter flex items-center justify-between gap-space-md">
+    <a href="#hero" class="flex items-center gap-space-sm lg:gap-space-md">
+      <img alt="Máfia Barber Logo" class="h-9 lg:h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdmP_9elEcC2W-acagyG6QHKJHpOauhiazMVdmuv7aRqTRQIirxZ5M89w60TaD_R6LNv2dthngr6dUBopM9qV3oBa1olEUNcMVua9c0geV7nonLdnj_9YGJ0ZdWHHf9JQra8eQrHdA4TL026HaK2FFHTWhgwvZwZPkuWPUc_C7y6sGQzguOZYecOiyDACs7fTpW-ohivY3CAiMUxkD3rS8zDXrtzJy24z1tEiI0sCC1K73Cwo3LbDwFA">
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm uppercase text-primary tracking-wider leading-none">Máfia Barber</span>
+        <span class="font-label-sm text-label-sm uppercase text-outline tracking-widest hidden sm:inline-block mt-1">Cavalheiros &amp; Tradição</span>
+      </div>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-space-lg">
+      <a class="nav-link font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#hero">Início</a>
+      <a class="nav-link font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#servicos">Serviços</a>
+      <a class="nav-link font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#experiencia-video">Santuário &amp; Clube</a>
+      <a class="nav-link font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#depoimentos">Depoimentos</a>
+      <a class="nav-link font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#contato">Contato</a>
+    </nav>
+
+    <div class="flex items-center gap-space-sm">
+      <a data-wa href="https://wa.me/5511987654321" target="_blank" rel="noopener" aria-label="WhatsApp direto" class="sm:hidden min-w-[44px] min-h-[44px] flex items-center justify-center rounded-xl text-primary bg-surface-container">
+        <span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+      </a>
+      <a class="btn-gold shimmer-effect hidden sm:inline-flex items-center justify-center px-space-md py-space-sm bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase rounded tracking-wider shadow-[0_4px_14px_rgba(197,160,89,0.25)] hover:bg-primary hover:text-on-primary transition-colors duration-300" href="#contato">Agendar Horário</a>
+    </div>
+  </div>
+</header>
+
+<main class="w-full bg-surface pb-24 lg:pb-0">
+
+<!-- 1. HERO COM VÍDEO -->
+<section id="hero" class="hero w-full min-h-[92vh] flex flex-col justify-center pt-28 lg:pt-32 pb-space-xl">
+  <div class="hero-video-wrap">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="./58444-488804243_medium.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[320px] lg:w-[700px] h-[240px] lg:h-[350px] bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+  <div class="max-w-[1320px] w-full mx-auto px-gutter-mobile lg:px-gutter flex flex-col gap-space-lg">
+    <div class="flex flex-col items-start lg:items-center text-left lg:text-center max-w-4xl lg:mx-auto gap-space-md">
+
+      <h1 data-hero="title" class="font-display-lg text-display-lg-mobile lg:text-display-lg text-on-surface uppercase tracking-tight leading-none">
+        Máfia Barber: <span class="text-primary italic font-normal">Corte, Navalha</span> &amp; Respeito
+      </h1>
+
+      <p data-hero="text" class="font-body-md lg:font-body-lg text-body-md lg:text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+        Mais que uma barbearia, um refúgio exclusivo para cavalheiros de atitude. Cuidados impecáveis com a lâmina, cervejas artesanais, charutos cubanos selecionados e a maestria dos velhos alfaiates capilares.
+      </p>
+
+      <a data-hero="cta" class="btn-gold group shimmer-effect w-full sm:w-auto inline-flex items-center justify-center gap-space-sm px-space-xl py-space-md min-h-[52px] bg-gradient-to-r from-primary via-primary-container to-primary text-on-primary font-label-lg text-label-lg uppercase tracking-widest rounded border border-primary/60 shadow-[0_0_30px_rgba(197,160,89,0.4)] hover:shadow-[0_0_45px_rgba(197,160,89,0.7)] transition-shadow duration-300" href="#contato">
+        <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+        <span class="font-bold">Agendar Meu Horário</span>
+        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md max-w-4xl w-full lg:mx-auto">
+      <div data-hero="card" class="flex items-center justify-center gap-space-sm px-space-md py-space-sm bg-surface-container/60 backdrop-blur-sm rounded border border-white/5 hover:border-primary/30 transition-colors">
+        <span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+        <span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">4.9/5 Estrelas (+2.500 Sócios)</span>
+      </div>
+      <div data-hero="card" class="flex items-center justify-center gap-space-sm px-space-md py-space-sm bg-surface-container/60 backdrop-blur-sm rounded border border-white/5 hover:border-primary/30 transition-colors">
+        <span class="material-symbols-outlined text-secondary text-[20px]">local_bar</span>
+        <span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Single Malt &amp; Café Cortesia</span>
+      </div>
+      <div data-hero="card" class="flex items-center justify-center gap-space-sm px-space-md py-space-sm bg-surface-container/60 backdrop-blur-sm rounded border border-white/5 hover:border-primary/30 transition-colors">
+        <span class="material-symbols-outlined text-secondary text-[20px]">content_cut</span>
+        <span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Toalha Quente &amp; Navalha Afiada</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. SERVIÇOS -->
+<section id="servicos" class="w-full py-space-xl lg:py-24 bg-surface">
+  <div class="max-w-[1320px] mx-auto px-gutter-mobile lg:px-gutter">
+    <div data-reveal class="flex flex-col items-center text-center mb-space-xl max-w-2xl mx-auto">
+      <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-space-xs">Cardápio de Maestria</span>
+      <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg uppercase text-on-surface tracking-tight">Nossos Rituais &amp; Serviços</h2>
+      <div class="title-line w-16 h-0.5 bg-primary my-space-sm opacity-60"></div>
+      <p class="font-body-md text-body-md text-on-surface-variant">Cada atendimento é uma cerimônia de precisão, executada com lâminas lapidadas e cosméticos de perfumaria fina italiana.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+      <div data-reveal class="ritual-card group bg-surface-container-low hover:bg-surface-container p-space-lg rounded border border-white/5 flex flex-col justify-between shadow-md">
+        <div>
+          <div class="flex items-center justify-between gap-space-sm mb-space-sm">
+            <span class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-sm text-label-sm rounded uppercase">45 Minutos</span>
+            <span class="price-badge font-headline-md text-headline-md text-primary font-bold">R$ 75</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface uppercase group-hover:text-primary transition-colors">Corte Tradicional Mafia</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs leading-relaxed">Trabalho minucioso na tesoura artesanal e máquina com graduação pura, alinhamento simétrico e finalização com pomada matte premium importada.</p>
+        </div>
+        <div class="pt-space-md mt-space-md flex items-center justify-between border-t border-white/5">
+          <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Lavagem Inclusa</span>
+          <button class="font-label-md text-label-md uppercase tracking-wider text-primary hover:text-secondary flex items-center gap-1 transition-colors" onclick="prefillService('Corte Tradicional Mafia')">Reservar Este <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
+        </div>
+      </div>
+
+      <div data-reveal class="ritual-card group bg-surface-container-low hover:bg-surface-container p-space-lg rounded border border-white/5 flex flex-col justify-between shadow-md">
+        <div>
+          <div class="flex items-center justify-between gap-space-sm mb-space-sm">
+            <span class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-sm text-label-sm rounded uppercase">40 Minutos</span>
+            <span class="price-badge font-headline-md text-headline-md text-primary font-bold">R$ 65</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface uppercase group-hover:text-primary transition-colors">Barba Terapia Toalha Quente</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs leading-relaxed">Esfoliação com microesferas minerais, vapor e toalha aromatizada com óleo de eucalipto, acabamento à navalha solingen e bálsamo refrescante.</p>
+        </div>
+        <div class="pt-space-md mt-space-md flex items-center justify-between border-t border-white/5">
+          <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">spa</span> Ritual Sensorial</span>
+          <button class="font-label-md text-label-md uppercase tracking-wider text-primary hover:text-secondary flex items-center gap-1 transition-colors" onclick="prefillService('Barba Terapia Toalha Quente')">Reservar Este <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
+        </div>
+      </div>
+
+      <div data-reveal class="ritual-card group relative bg-surface-container p-space-lg rounded border border-primary/40 flex flex-col justify-between shadow-xl">
+        <div class="absolute -top-3 right-4 px-space-sm py-0.5 bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider rounded font-bold shadow-md">Mais Solicitado</div>
+        <div>
+          <div class="flex items-center justify-between gap-space-sm mb-space-sm">
+            <span class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-sm text-label-sm rounded uppercase">1h 15 Min</span>
+            <span class="price-badge font-headline-md text-headline-md text-primary font-bold">R$ 125</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface uppercase group-hover:text-primary transition-colors">Combo "Il Padrino"</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs leading-relaxed">O ritual de honra completo: corte de cabelo estilizado, barba terapia completa, massagem craniana relaxante e dose dupla de single malt escocês.</p>
+        </div>
+        <div class="pt-space-md mt-space-md flex items-center justify-between border-t border-white/5">
+          <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">local_bar</span> Degustação Inclusa</span>
+          <button class="font-label-md text-label-md uppercase tracking-wider text-primary hover:text-secondary flex items-center gap-1 transition-colors font-bold" onclick="prefillService('Combo Il Padrino')">Reservar Este <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
+        </div>
+      </div>
+
+      <div data-reveal class="ritual-card group bg-surface-container-low hover:bg-surface-container p-space-lg rounded border border-white/5 flex flex-col justify-between shadow-md">
+        <div>
+          <div class="flex items-center justify-between gap-space-sm mb-space-sm">
+            <span class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-sm text-label-sm rounded uppercase">30 Minutos</span>
+            <span class="price-badge font-headline-md text-headline-md text-primary font-bold">R$ 50</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface uppercase group-hover:text-primary transition-colors">Pigmentação Barba &amp; Cabelo</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs leading-relaxed">Camuflagem natural de fios brancos e preenchimento de falhas de densidade com micropigmentos orgânicos. Resultado impecável e discreto por semanas.</p>
+        </div>
+        <div class="pt-space-md mt-space-md flex items-center justify-between border-t border-white/5">
+          <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">brush</span> Toque Natural</span>
+          <button class="font-label-md text-label-md uppercase tracking-wider text-primary hover:text-secondary flex items-center gap-1 transition-colors" onclick="prefillService('Pigmentação Barba &amp; Cabelo')">Reservar Este <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
+        </div>
+      </div>
+
+      <div data-reveal class="ritual-card group bg-surface-container-low hover:bg-surface-container p-space-lg rounded border border-white/5 flex flex-col justify-between shadow-md">
+        <div>
+          <div class="flex items-center justify-between gap-space-sm mb-space-sm">
+            <span class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-sm text-label-sm rounded uppercase">40 Minutos</span>
+            <span class="price-badge font-headline-md text-headline-md text-primary font-bold">R$ 80</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface uppercase group-hover:text-primary transition-colors">Tratamento Capilar &amp; SPA</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs leading-relaxed">Detox folicular profundo com argiloterapia, banho de ozônio para controle da oleosidade e fortalecimento da raiz contra queda precoce.</p>
+        </div>
+        <div class="pt-space-md mt-space-md flex items-center justify-between border-t border-white/5">
+          <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">self_improvement</span> Saúde Capilar</span>
+          <button class="font-label-md text-label-md uppercase tracking-wider text-primary hover:text-secondary flex items-center gap-1 transition-colors" onclick="prefillService('Tratamento Capilar &amp; SPA')">Reservar Este <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
+        </div>
+      </div>
+
+      <div data-reveal class="ritual-card group bg-surface-container-low hover:bg-surface-container p-space-lg rounded border border-white/5 flex flex-col justify-between shadow-md md:col-span-2 lg:col-span-3">
+        <div>
+          <div class="flex items-center justify-between gap-space-sm mb-space-sm">
+            <span class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-sm text-label-sm rounded uppercase">Exclusivo</span>
+            <span class="price-badge font-headline-md text-headline-md text-primary font-bold">Sob Medida</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface uppercase group-hover:text-primary transition-colors">Dia do Noivo &amp; Padrinhos</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs leading-relaxed max-w-3xl">Fechamento do andar VIP exclusivo para confraria com charutos, degustação de whiskies raros, mesa de bilhar e atendimento sincronizado.</p>
+        </div>
+        <div class="pt-space-md mt-space-md flex items-center justify-between border-t border-white/5">
+          <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">workspace_premium</span> Lounge Privativo</span>
+          <button class="font-label-md text-label-md uppercase tracking-wider text-primary hover:text-secondary flex items-center gap-1 transition-colors" onclick="prefillService('Dia do Noivo VIP')">Reservar Este <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. CLUBE DA CONFRARIA -->
+<section id="experiencia-video" class="w-full py-space-xl lg:py-24 bg-surface-container-lowest overflow-hidden">
+  <div class="max-w-[1320px] mx-auto px-gutter-mobile lg:px-gutter">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+      <div class="lg:col-span-5 flex flex-col gap-space-md">
+        <div data-reveal class="flex flex-col gap-space-sm">
+          <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Santuário dos Cavalheiros</span>
+          <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg uppercase text-on-surface tracking-tight leading-tight">Mais que um Corte: O Clube da Confraria</h2>
+          <div class="title-line w-16 h-0.5 bg-primary opacity-60"></div>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Ao atravessar nossas portas maciças em jacarandá, o ritmo caótico da metrópole fica para trás. Você é acolhido por notas de couro envelhecido, charutos cubanos e uma dose refinada de bourbon.</p>
+        </div>
+
+        <div class="flex flex-col gap-space-md">
+          <div data-reveal class="flex items-start gap-space-sm group">
+            <div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center shrink-0 text-primary border border-white/5 group-hover:border-primary/40 transition-colors"><span class="material-symbols-outlined text-[22px]">sports_bar</span></div>
+            <div>
+              <h4 class="font-headline-sm text-headline-sm text-on-surface">Lounge Bar &amp; Sinuca</h4>
+              <p class="font-body-sm text-body-sm text-outline">Mesa profissional Brunswick, chopes locais artesanais e rótulos de uísque raros disponíveis sem custo adicional durante sua espera.</p>
+            </div>
+          </div>
+          <div data-reveal class="flex items-start gap-space-sm group">
+            <div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center shrink-0 text-primary border border-white/5 group-hover:border-primary/40 transition-colors"><span class="material-symbols-outlined text-[22px]">chair</span></div>
+            <div>
+              <h4 class="font-headline-sm text-headline-sm text-on-surface">Cadeiras Vintage Koken (1934)</h4>
+              <p class="font-body-sm text-body-sm text-outline">Peças autênticas de colecionador restauradas em estofamento capitonê vermelho sangue com pistão hidráulico silencioso.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-space-sm pt-space-md border-t border-surface-container-high">
+          <div data-reveal class="flex flex-col">
+            <span class="counter font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary font-bold" data-count="15">15</span>
+            <span class="font-label-sm text-label-sm uppercase text-outline">Anos de Tradição</span>
+          </div>
+          <div data-reveal class="flex flex-col">
+            <span class="counter font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary font-bold" data-count="12">12</span>
+            <span class="font-label-sm text-label-sm uppercase text-outline">Mestres Barbeiros</span>
+          </div>
+          <div data-reveal class="flex flex-col">
+            <span class="counter font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary font-bold" data-count="18" data-prefix="+" data-suffix="k">+18k</span>
+            <span class="font-label-sm text-label-sm uppercase text-outline">Whiskies Servidos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="club-image relative w-full aspect-[4/3] sm:aspect-video rounded-lg overflow-hidden bg-surface-container border border-[#c5a059]/30 shadow-2xl shadow-black/80">
+          <img alt="Lounge de barbearia de luxo com poltronas chesterfield, painéis de madeira escura e iluminação âmbar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB74XCG7biCseoF5ZKa8rKDVznw48gU0JSOZqKYSS6Lc0QlXp3qAGwB7WCGyUvf2dddnG_F0qRt0A8u2eXWP9RmpPbYf_YA_tDVVAYjft8yHhbAvu8LgpXyaKdq9QIcD7wfONJ7Cx7cHeKY420V7OMctV8nKxmPnt45vaLF0EyjWdWenOVe8vRxN7qQ_1yCW3lksUowsd-t2eS1EyK6dTw2xbUlNbGnMo0IihzROtAn">
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-black/20 to-transparent pointer-events-none"></div>
+          <div class="absolute inset-0 ring-1 ring-inset ring-primary/20 pointer-events-none"></div>
+          <div class="absolute top-3 right-3 sm:top-4 sm:right-4">
+            <span class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-lowest/85 backdrop-blur-md rounded border border-primary/40 font-label-sm text-label-sm uppercase text-primary tracking-widest font-semibold shadow-lg">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>Exclusivo para Confrades
+            </span>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 flex items-center justify-between pointer-events-none">
+            <div class="flex items-center gap-2 px-space-sm py-1 bg-surface-container-lowest/80 backdrop-blur-md rounded border border-white/10">
+              <span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+              <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Atmosfera Speakeasy</span>
+            </div>
+            <span class="hidden sm:inline-block px-space-sm py-1 bg-primary/20 backdrop-blur-md rounded border border-primary/30 font-label-sm text-label-sm uppercase text-primary font-bold">Reserva Restrita</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. DEPOIMENTOS -->
+<section id="depoimentos" class="w-full py-space-xl lg:py-24 bg-surface">
+  <div class="max-w-[1320px] mx-auto px-gutter-mobile lg:px-gutter">
+    <div data-reveal class="flex flex-col items-center text-center mb-space-xl max-w-2xl mx-auto">
+      <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-space-xs">Palavra de Honra</span>
+      <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg uppercase text-on-surface tracking-tight">O Que Dizem Nossos Membros</h2>
+      <div class="title-line w-16 h-0.5 bg-primary my-space-sm opacity-60"></div>
+      <p class="font-body-md text-body-md text-on-surface-variant">Homens que valorizam pontualidade, discrição e a melhor tesoura do estado.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+      <div data-reveal class="bg-surface-container-low p-space-lg rounded border border-white/5 hover:border-primary/30 transition-colors flex flex-col justify-between shadow-md relative">
+        <span class="material-symbols-outlined absolute top-4 right-4 text-surface-container-highest text-5xl select-none opacity-40">format_quote</span>
+        <div>
+          <div class="stars flex text-primary mb-space-sm"><span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span></div>
+          <p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">"Frequento a Máfia Barber há mais de 3 anos. O corte na tesoura é impecável, mas o grande diferencial é o respeito ao horário. Você senta exatamente na hora combinada, saboreia um belo bourbon e sai revigorado para as reuniões."</p>
+        </div>
+        <div class="flex items-center gap-space-sm pt-space-md mt-space-md border-t border-white/5">
+          <img class="w-12 h-12 rounded-full object-cover border border-primary/30" alt="Dr. Roberto Valença" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEAEiEmrBmymCq-XWU3x9LLRAUcKw_jqpqEBqtV_tAm_7QP9zQGFTh78tTVtvgLdRCoo0D-Nn4Cs1-ZWnB0qVijkADxx2PMlqZGPQq_UFpwiKplDKJTGTlgzeeLv31QbW3ZsAskLXF9arhw38OrHllIB1AMUkj790zNf9mFNdpsfmyiXLZqIYpE3jaSrIMM0e-7HA3xIRj-TP7gM5Hkz5ld6JOPp78A0HHNrfeYs6u">
+          <div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface">Dr. Roberto Valença</span><span class="font-label-sm text-label-sm uppercase text-secondary">Advogado Corporativo</span></div>
+        </div>
+      </div>
+
+      <div data-reveal class="bg-surface-container-low p-space-lg rounded border border-white/5 hover:border-primary/30 transition-colors flex flex-col justify-between shadow-md relative">
+        <span class="material-symbols-outlined absolute top-4 right-4 text-surface-container-highest text-5xl select-none opacity-40">format_quote</span>
+        <div>
+          <div class="stars flex text-primary mb-space-sm"><span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span></div>
+          <p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">"Fiz o Dia do Noivo com meus 6 padrinhos no espaço privativo. Foi surreal: charutos da melhor procedência, sinuca, risadas e um atendimento de alfaiataria de primeiro mundo. Minha esposa elogiou o degradê a noite toda."</p>
+        </div>
+        <div class="flex items-center gap-space-sm pt-space-md mt-space-md border-t border-white/5">
+          <img class="w-12 h-12 rounded-full object-cover border border-primary/30" alt="Lucas Meneghetti" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyMVLXliqUEDpdQrtFWRlU5zfoA4zcEFfw4z3S80mMsAwZVm-maErj6S61QeaOylEhmvOpfPmVw5pVDQj9yKoW-L1QlOSYu_-CP6w1NB7oqavosbAInB1eDVH6vE7SQ9dXEWHpoPbjTwYwvGkr9w_RlkIy3flW64QsjIYeoTADikuoh-3od9YboB8GfWOXh4P9rV2MW9ElHvhbqIBHAeK_1ogd7CRi3D3DXg39Nrtl">
+          <div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface">Lucas Meneghetti</span><span class="font-label-sm text-label-sm uppercase text-secondary">Empresário &amp; Investidor</span></div>
+        </div>
+      </div>
+
+      <div data-reveal class="bg-surface-container-low p-space-lg rounded border border-white/5 hover:border-primary/30 transition-colors flex flex-col justify-between shadow-md relative">
+        <span class="material-symbols-outlined absolute top-4 right-4 text-surface-container-highest text-5xl select-none opacity-40">format_quote</span>
+        <div>
+          <div class="stars flex text-primary mb-space-sm"><span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span></div>
+          <p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">"A Barba Terapia com Toalha Quente é um ritual sagrado de sexta-feira. A precisão dos mestres com a navalha lembra as barbearias clássicas de Palermo. Não troco a Máfia Barber por nenhum outro lugar de São Paulo."</p>
+        </div>
+        <div class="flex items-center gap-space-sm pt-space-md mt-space-md border-t border-white/5">
+          <img class="w-12 h-12 rounded-full object-cover border border-primary/30" alt="Guilherme Siqueira" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJJ7WyDooaSHMd0GPFRjGQIkwxxWStK5_UM77dybfukD8WgA5SlMtPTJPKOpvzDvskoOMbYLq1MDZvMx7AqWa8Qtz1pBVgFKppUBwvEsqIR28k4Tj6ejf7Ni2EiNeCCVm1BNBKNcJeoXyfgjzmPa2E4WcdrNmZ_hDbSgREAkaCLccgbL3k896CdmVGAORYFrtxH8336k7z8tt8y2UI16fenjP1Z0nIzm9fNuF17Sai">
+          <div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface">Guilherme Siqueira</span><span class="font-label-sm text-label-sm uppercase text-secondary">Arquiteto Urbanista</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. CONTATO / RESERVAS -->
+<section id="contato" class="w-full py-space-xl lg:py-24 bg-surface-container-lowest">
+  <div class="max-w-[1320px] mx-auto px-gutter-mobile lg:px-gutter">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+
+      <div class="lg:col-span-5 flex flex-col justify-between gap-space-lg">
+        <div data-reveal>
+          <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-space-xs inline-block">Audiência &amp; Reservas</span>
+          <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg uppercase text-on-surface tracking-tight mb-space-md">Entre em Contato com a Máfia</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">Para pacotes corporativos, celebrações privadas de Dia do Noivo ou agendamentos prioritários com Mestres Caporegime, fale diretamente com nossa equipe de concierge.</p>
+
+          <div class="flex flex-col gap-space-md">
+            <div class="flex items-start gap-space-sm">
+              <span class="material-symbols-outlined text-primary text-[24px]">location_on</span>
+              <div>
+                <h4 class="font-headline-sm text-headline-sm text-on-surface">Endereço Nobre</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Rua dos Mestres Alfaiates, 1920 — Bairro Histórico, São Paulo, SP</p>
+                <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Estacionamento com Manobrista Gratuito</span>
+              </div>
+            </div>
+            <div class="flex items-start gap-space-sm">
+              <span class="material-symbols-outlined text-primary text-[24px]">phone_in_talk</span>
+              <div>
+                <h4 class="font-headline-sm text-headline-sm text-on-surface">Linha Direta / WhatsApp VIP</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">(11) 98765-4321 / (11) 3456-7890</p>
+                <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Resposta em até 15 minutos</span>
+              </div>
+            </div>
+            <div class="flex items-start gap-space-sm">
+              <span class="material-symbols-outlined text-primary text-[24px]">schedule</span>
+              <div>
+                <h4 class="font-headline-sm text-headline-sm text-on-surface">Horário dos Rituais</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Segunda a Sábado: 09h00 às 21h00</p>
+                <p class="font-body-sm text-body-sm text-outline">Domingos: Exclusivo para Eventos &amp; Confrarias</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-reveal class="w-full h-48 rounded bg-surface-container overflow-hidden shadow-lg border border-white/5">
+          <div class="w-full h-full bg-cover bg-center flex items-end p-space-sm" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCteSoqNkwa7UCPu8gRNmt89hiJJgS588YTTZvhUwSRlJzXyrYBSFAp8QQe_qM0juYZalQGdxapiFg9Y2ymnW2QKq3-4BJj_e7izuHruJJPnOj4lkbDjpyFF8BBP1UCwrbvuwt1YPIMz37Iq8ujDAgjaoX2zAVzsVSWa6e1dU9lzXDFr6cF2C00YR2qQicqnVibjSmTYSIUhkG8VU1JaYGt927tRGPZoQEc5QdDjKEA')">
+            <a href="https://www.google.com/maps/search/?api=1&query=Rua+dos+Mestres+Alfaiates+1920+S%C3%A3o+Paulo" target="_blank" rel="noopener" class="bg-surface/90 backdrop-blur-md px-space-sm py-1 rounded flex items-center gap-space-xs text-primary border border-primary/30">
+              <span class="material-symbols-outlined text-[18px]">explore</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Ver no Google Maps</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal class="lg:col-span-7 bg-surface-container p-space-lg sm:p-space-xl rounded-lg shadow-2xl border border-white/5">
+        <div class="flex items-center justify-between pb-space-sm mb-space-md border-b border-surface-container-high">
+          <h3 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wide">Solicitação de Reserva &amp; Orçamento</h3>
+          <span class="material-symbols-outlined text-primary">lock</span>
+        </div>
+
+        <form class="flex flex-col gap-space-md" id="booking-form">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm uppercase tracking-wider text-outline" for="nome">Nome do Cavalheiro *</label>
+              <input class="w-full bg-surface-container-lowest text-on-surface px-space-md py-space-sm min-h-[48px] rounded font-body-sm text-body-sm border border-white/5 focus:outline-none focus:ring-1 focus:ring-primary" id="nome" placeholder="Ex.: Victorio Marcone" required type="text">
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm uppercase tracking-wider text-outline" for="telefone">WhatsApp / Telefone *</label>
+              <input class="w-full bg-surface-container-lowest text-on-surface px-space-md py-space-sm min-h-[48px] rounded font-body-sm text-body-sm border border-white/5 focus:outline-none focus:ring-1 focus:ring-primary" id="telefone" placeholder="(11) 99999-9999" required type="tel">
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="font-label-sm text-label-sm uppercase tracking-wider text-outline" for="email">E-mail Corporativo / Pessoal *</label>
+            <input class="w-full bg-surface-container-lowest text-on-surface px-space-md py-space-sm min-h-[48px] rounded font-body-sm text-body-sm border border-white/5 focus:outline-none focus:ring-1 focus:ring-primary" id="email" placeholder="cavalheiro@exemplo.com.br" required type="email">
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm uppercase tracking-wider text-outline" for="servico-select">Serviço de Interesse</label>
+              <select class="w-full bg-surface-container-lowest text-on-surface px-space-md py-space-sm min-h-[48px] rounded font-body-sm text-body-sm border border-white/5 focus:outline-none focus:ring-1 focus:ring-primary" id="servico-select">
+                <option value="Combo Il Padrino">Combo "Il Padrino" (Corte + Barba)</option>
+                <option value="Corte Tradicional Mafia">Corte Tradicional Mafia</option>
+                <option value="Barba Terapia Toalha Quente">Barba Terapia com Toalha Quente</option>
+                <option value="Pigmentação Barba &amp; Cabelo">Pigmentação Barba &amp; Cabelo</option>
+                <option value="Tratamento Capilar &amp; SPA">Tratamento Capilar &amp; SPA Masculino</option>
+                <option value="Dia do Noivo VIP">Dia do Noivo &amp; Padrinhos</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm uppercase tracking-wider text-outline" for="barbeiro-select">Mestre Barbeiro</label>
+              <select class="w-full bg-surface-container-lowest text-on-surface px-space-md py-space-sm min-h-[48px] rounded font-body-sm text-body-sm border border-white/5 focus:outline-none focus:ring-1 focus:ring-primary" id="barbeiro-select">
+                <option value="Qualquer Disponível">Primeiro Mestre Disponível</option>
+                <option value="Don Vincenzo">Don Vincenzo (Maestro Tesourista)</option>
+                <option value="Matteo Rossi">Matteo Rossi (Especialista em Navalha)</option>
+                <option value="Giancarlo Santana">Giancarlo Santana (Caporegime)</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm uppercase tracking-wider text-outline" for="data">Data Pretendida *</label>
+              <input class="w-full bg-surface-container-lowest text-on-surface px-space-md py-space-sm min-h-[48px] rounded font-body-sm text-body-sm border border-white/5 focus:outline-none focus:ring-1 focus:ring-primary" id="data" required type="date">
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm uppercase tracking-wider text-outline" for="horario">Período Preferencial *</label>
+              <select class="w-full bg-surface-container-lowest text-on-surface px-space-md py-space-sm min-h-[48px] rounded font-body-sm text-body-sm border border-white/5 focus:outline-none focus:ring-1 focus:ring-primary" id="horario">
+                <option value="Manhã (09:00 - 12:00)">Manhã (09h00 às 12h00)</option>
+                <option value="Tarde (13:00 - 18:00)" selected>Tarde (13h00 às 18h00)</option>
+                <option value="Noite (18:00 - 21:00)">Noite (18h00 às 21h00)</option>
+              </select>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="font-label-sm text-label-sm uppercase tracking-wider text-outline" for="mensagem">Observações Especiais</label>
+            <textarea class="w-full bg-surface-container-lowest text-on-surface px-space-md py-space-sm rounded font-body-sm text-body-sm border border-white/5 focus:outline-none focus:ring-1 focus:ring-primary resize-none" id="mensagem" placeholder="Ex.: Noivo, alergias, bebida de preferência..." rows="3"></textarea>
+          </div>
+
+          <div class="hidden p-space-sm bg-primary/10 border border-primary/30 rounded text-center" id="form-success-feedback">
+            <span class="font-label-md text-label-md text-primary uppercase">Solicitação recebida com honra! Nosso concierge entrará em contato via WhatsApp em minutos.</span>
+          </div>
+
+          <button class="btn-gold shimmer-effect w-full py-space-md px-space-lg min-h-[52px] bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary font-label-lg text-label-lg uppercase tracking-widest rounded transition-colors duration-300 shadow-[0_8px_20px_rgba(197,160,89,0.3)] flex items-center justify-center gap-space-sm" type="submit">
+            <span class="material-symbols-outlined text-[20px]">send</span><span class="font-bold">Confirmar e Enviar Solicitação</span>
+          </button>
+
+          <div class="relative flex items-center justify-center my-space-sm">
+            <div class="w-full border-t border-surface-container-high"></div>
+            <span class="absolute bg-surface-container px-space-sm font-label-sm text-label-sm uppercase tracking-widest text-outline">ou agende diretamente</span>
+          </div>
+
+          <a data-wa href="https://wa.me/5511987654321" target="_blank" rel="noopener" class="btn-gold w-full py-space-md px-space-lg min-h-[52px] bg-surface-container-lowest hover:bg-surface-container-high border border-primary/60 text-primary font-label-lg text-label-lg uppercase tracking-widest rounded transition-colors duration-300 flex items-center justify-center gap-space-sm text-center">
+            <span class="material-symbols-outlined text-[20px]">chat</span>
+            <span class="font-bold">Agendar via WhatsApp VIP</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="w-full bg-surface-container-lowest border-t border-white/5 py-space-xl pb-28 lg:pb-space-xl">
+  <div class="max-w-[1320px] mx-auto px-gutter-mobile lg:px-gutter">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl mb-space-xl">
+      <div class="flex flex-col gap-space-sm">
+        <span class="font-headline-sm text-headline-sm uppercase text-primary tracking-wide">Máfia Barber</span>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">A excelência do corte clássico e o ritual da navalha sob medida. Tradição, precisão cirúrgica e a honra da verdadeira alfaiataria capilar.</p>
+        <div class="flex items-center gap-space-sm mt-space-xs">
+          <a aria-label="Instagram" class="w-11 h-11 rounded bg-surface-container flex items-center justify-center text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a>
+          <a data-wa aria-label="WhatsApp" class="w-11 h-11 rounded bg-surface-container flex items-center justify-center text-outline hover:text-primary transition-colors" href="https://wa.me/5511987654321" target="_blank" rel="noopener"><span class="material-symbols-outlined text-[18px]">chat</span></a>
+          <a aria-label="YouTube" class="w-11 h-11 rounded bg-surface-container flex items-center justify-center text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">play_circle</span></a>
+        </div>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <h4 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wider">Localização</h4>
+        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Rua dos Mestres Alfaiates, 1920<br>Bairro Histórico — São Paulo, SP<br>CEP 01310-200</p>
+        <span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Estacionamento Exclusivo &amp; Valet</span>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <h4 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wider">Atendimento</h4>
+        <p class="font-body-sm text-body-sm text-on-surface"><span class="text-primary font-semibold">Segunda a Sábado:</span><br>09h00 às 21h00</p>
+        <p class="font-body-sm text-body-sm text-outline"><span class="text-on-surface-variant font-medium">Domingos e Feriados:</span><br>Fechado para rituais internos</p>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <h4 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wider">Navegação Rápida</h4>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#hero">Início</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#servicos">Menu de Serviços</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#experiencia-video">O Santuário Privativo</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#depoimentos">Depoimentos dos Membros</a>
+        <a class="font-body-sm text-body-sm text-primary hover:text-secondary transition-colors font-semibold" href="#contato">Reservar Minha Cadeira</a>
+      </div>
+    </div>
+    <div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md border-t border-white/5">
+      <span class="font-label-sm text-label-sm uppercase tracking-widest text-outline text-center">© 2026 MÁFIA BARBER. TODOS OS DIREITOS RESERVADOS.</span>
+      <div class="flex items-center gap-space-md">
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Privacidade</span>
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Termos de Honra</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp flutuante (acima do menu inferior no mobile) -->
+<div class="floating-wa fixed bottom-24 right-4 lg:bottom-6 lg:right-6 z-50 flex items-center gap-space-sm">
+  <div class="hidden lg:flex items-center gap-1.5 px-space-md py-1.5 bg-surface-container/95 border border-primary/40 rounded-full shadow-2xl backdrop-blur-md pointer-events-none">
+    <span class="w-2 h-2 rounded-full bg-[#25D366] animate-pulse shrink-0"></span>
+    <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">VIP Concierge <span class="text-primary font-bold">Online</span></span>
+  </div>
+  <a data-wa href="https://wa.me/5511987654321" target="_blank" rel="noopener" aria-label="Agendar via WhatsApp VIP" class="relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white shadow-[0_4px_25px_rgba(37,211,102,0.45)] transition-colors duration-300">
+    <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-30 animate-ping pointer-events-none"></span>
+    <svg class="w-7 h-7 fill-current relative z-10" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.36-.77-1.86c-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+  </a>
+</div>
+
+<!-- Menu inferior (somente mobile / tablet) -->
+<nav class="bottom-nav lg:hidden fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-8px_32px_rgba(0,0,0,0.7)]">
+  <div class="flex justify-around items-center h-20 px-space-xs">
+    <a class="nav-link flex flex-col items-center justify-center min-w-[44px] w-16 h-14 text-on-surface-variant transition-colors" href="#hero"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="font-label-sm text-label-sm mt-1">Início</span></a>
+    <a class="nav-link flex flex-col items-center justify-center min-w-[44px] w-16 h-14 text-on-surface-variant transition-colors" href="#servicos"><span class="material-symbols-outlined text-[22px]">content_cut</span><span class="font-label-sm text-label-sm mt-1">Serviços</span></a>
+    <a class="flex flex-col items-center justify-center min-w-[44px] w-16 h-14 text-primary font-semibold" href="#contato">
+      <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg"><span class="material-symbols-outlined text-[22px]">calendar_month</span></div>
+      <span class="font-label-sm text-label-sm text-primary mt-0.5">Agendar</span>
+    </a>
+    <a class="nav-link flex flex-col items-center justify-center min-w-[44px] w-16 h-14 text-on-surface-variant transition-colors" href="#experiencia-video"><span class="material-symbols-outlined text-[22px]">crown</span><span class="font-label-sm text-label-sm mt-1">Clube</span></a>
+    <a class="nav-link flex flex-col items-center justify-center min-w-[44px] w-16 h-14 text-on-surface-variant transition-colors" href="#depoimentos"><span class="material-symbols-outlined text-[22px]">rate_review</span><span class="font-label-sm text-label-sm mt-1">Depoim.</span></a>
+  </div>
+</nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

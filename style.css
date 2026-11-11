@@ -1,0 +1,73 @@
+@layer base {
+  html, body { margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { overscroll-behavior: none; overflow-x: hidden; }
+  .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+  section[id] { scroll-margin-top: 4.5rem; }
+}
+
+::-webkit-scrollbar { display: none; }
+
+/* ---------- HERO COM VÍDEO ---------- */
+/* isolation mantém o vídeo (camada negativa) dentro do hero, acima do fundo do <main> */
+.hero { position: relative; isolation: isolate; overflow: hidden; }
+.hero-video-wrap { position: absolute; inset: 0; z-index: -2; overflow: hidden; }
+.hero-video {
+  position: absolute; left: 0; top: -10%;
+  width: 100%; height: 120%;      /* folga para o parallax */
+  object-fit: cover; opacity: 0.55; will-change: transform;
+}
+.hero-overlay {
+  position: absolute; inset: 0; z-index: -1;
+  background:
+    radial-gradient(ellipse at center, rgba(14,14,14,0) 0%, rgba(14,14,14,.55) 85%),
+    linear-gradient(rgba(14,14,14,.78) 0%, rgba(14,14,14,.6) 45%, rgba(14,14,14,.9) 85%, #0e0e0e 100%);
+}
+
+/* Título dividido em palavras (GSAP) */
+.word-mask { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .12em; }
+.word { display: inline-block; will-change: transform; }
+
+/* Brilho dourado contínuo nos CTAs */
+@keyframes goldShimmer {
+  0% { transform: translateX(-150%) skewX(-20deg); }
+  50%, 100% { transform: translateX(250%) skewX(-20deg); }
+}
+.shimmer-effect { position: relative; overflow: hidden; }
+.shimmer-effect::after {
+  content: ""; position: absolute; top: 0; left: 0; width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.28), transparent);
+  animation: goldShimmer 4.5s ease-in-out infinite; pointer-events: none;
+}
+
+/* Cards de serviço: usa a propriedade `translate` (separada de `transform`)
+   para o hover não brigar com as animações do GSAP */
+.ritual-card {
+  transition: translate .35s cubic-bezier(.16,1,.3,1), border-color .35s ease, box-shadow .35s ease, background-color .35s ease;
+}
+.ritual-card:hover {
+  translate: 0 -4px;
+  border-color: rgba(233,193,118,.55) !important;
+  box-shadow: 0 12px 30px -10px rgba(197,160,89,.22), 0 0 1px 1px rgba(233,193,118,.3);
+}
+.ritual-card:hover .price-badge { text-shadow: 0 0 12px rgba(233,193,118,.5); }
+
+/* Link ativo no menu (marcado pelo ScrollTrigger) */
+.nav-link.is-active { color: #e9c176; }
+
+.club-image, .club-image img { will-change: transform; }
+
+#scroll-progress {
+  position: fixed; top: 0; left: 0; height: 2px; width: 100%;
+  background: linear-gradient(90deg, #c5a059, #ffdea5);
+  transform-origin: 0 50%; transform: scaleX(0);
+  z-index: 60; pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .shimmer-effect::after { animation: none; }
+  .hero-video { display: none; }
+  .hero-video-wrap { background: url("https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1600&q=80") center/cover; opacity: .25; }
+}
